@@ -1,102 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <title>Seu Site</title>
+  <meta charset="UTF-8">
+  <title>Danielle 🚀 Criação de Sites</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background-color: #0f172a;
-      color: white;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background: #0f172a; color: white; overflow-x: hidden; }
+
+    /* Fundo animado */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(270deg, #3b82f6, #9333ea, #22c55e, #f59e0b);
+      background-size: 800% 800%;
+      z-index: -1;
+      animation: gradientBG 20s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100% {background-position:0% 50%;}
     }
 
     header {
       text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(to right, #3b82f6, #9333ea);
+      padding: 80px 20px;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid #fff1;
     }
 
-    h1 {
-      margin: 0;
-      font-size: 40px;
-    }
-
-    p {
-      font-size: 18px;
-    }
+    h1 { font-family: 'Montserrat', sans-serif; font-size: 48px; color: #fff; margin-bottom: 10px; }
+    p { font-size: 20px; color: #e2e8f0; }
 
     .botao {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background-color: #22c55e;
+      margin-top: 25px;
+      padding: 14px 30px;
+      background: #22c55e;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
       font-weight: bold;
+      border-radius: 12px;
+      transition: 0.3s ease;
+    }
+    .botao:hover {
+      background: #16a34a;
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #22c55e;
     }
 
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
+    section { padding: 60px 20px; text-align: center; }
+    section h2 { font-family: 'Montserrat', sans-serif; font-size: 36px; margin-bottom: 30px; color: #fff; }
 
+    /* Cartões modernos */
+    .card-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
     .card {
-      background-color: #1e293b;
-      margin: 15px;
-      padding: 20px;
-      border-radius: 10px;
-      display: inline-block;
-      width: 250px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 30px;
+      width: 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(10px);
     }
+    .card:hover {
+      transform: translateY(-15px) scale(1.05);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+    .card h3 { font-size: 24px; margin-bottom: 10px; color: #fff; }
+    .card p { color: #e2e8f0; }
+
+    /* Fade-in scroll animation */
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .fade-in.show { opacity: 1; transform: translateY(0); }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #020617;
+      padding: 30px;
+      background: rgba(0,0,0,0.5);
       font-size: 14px;
+      border-top: 2px solid #fff1;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
+  <header class="fade-in">
     <h1>Danielle 🚀</h1>
     <p>Criação de sites modernos e rápidos</p>
-    <a class="botao" href="https://wa.me/(18)99678-6332">Fale no WhatsApp</a>
+    <a class="botao" href="https://wa.me/55189996786332">Fale no WhatsApp</a>
   </header>
 
-  <section>
+  <section class="fade-in">
     <h2>Meus Serviços</h2>
-
-    <div class="card">
-      <h3>Site para Loja</h3>
-      <p>Apresente seus produtos online</p>
-    </div>
-
-    <div class="card">
-      <h3>Landing Page</h3>
-      <p>Página simples para vender mais</p>
-    </div>
-
-    <div class="card">
-      <h3>Site Pessoal</h3>
-      <p>Mostre seu trabalho na internet</p>
+    <div class="card-container">
+      <div class="card">
+        <h3>Site para Loja</h3>
+        <p>Apresente seus produtos online de forma moderna</p>
+      </div>
+      <div class="card">
+        <h3>Landing Page</h3>
+        <p>Página simples e atrativa para vender mais</p>
+      </div>
+      <div class="card">
+        <h3>Site Pessoal</h3>
+        <p>Mostre seu trabalho ou portfólio na internet</p>
+      </div>
     </div>
   </section>
 
-  <section>
+  <section class="fade-in">
     <h2>Por que me escolher?</h2>
     <p>✔️ Entrega rápida</p>
     <p>✔️ Preço acessível</p>
     <p>✔️ Atendimento direto no WhatsApp</p>
   </section>
 
-  <footer>
+  <footer class="fade-in">
     <p>© 2026 - Danielle</p>
   </footer>
+
+  <script>
+    // Scroll fade-in
+    const faders = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      faders.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        const height = window.innerHeight;
+        if(top < height - 100) {
+          el.classList.add('show');
+        }
+      });
+    });
+    // Dispara ao carregar
+    window.dispatchEvent(new Event('scroll'));
+  </script>
 
 </body>
 </html>
